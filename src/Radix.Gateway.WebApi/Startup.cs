@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Radix.Gateway.Infra.Ioc;
 using Radix.Gateway.WebApi.Configurations;
+using Radix.Gateway.WebApi.LogManagement;
 using System.IO;
 
 namespace Radix.Gateway.WebApi
@@ -28,6 +29,10 @@ namespace Radix.Gateway.WebApi
         {
             services.AddWebApi();
             services.AddSingleton<IConfiguration>(Configuration);
+            services.AddMvc(config =>
+            {
+                config.Filters.Add(typeof(UnhandledExceptionManager));
+            });
 
             InjectorBootstrapper.RegisterServices(services);
         }
@@ -40,6 +45,7 @@ namespace Radix.Gateway.WebApi
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseWelcomePage();
             app.UseCors("AllowAnyOrigin");
             app.UseMvc();
         }
