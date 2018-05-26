@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using Radix.Gateway.Infra.Ioc;
+using Radix.Gateway.WebApi.Configurations;
 
 namespace Radix.Gateway.WebApi
 {
@@ -24,6 +19,7 @@ namespace Radix.Gateway.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddWebApi();
             InjectorBootstrapper.RegisterServices(services);
         }
 
@@ -35,6 +31,7 @@ namespace Radix.Gateway.WebApi
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors("AllowAnyOrigin");
             app.UseMvc();
         }
     }
