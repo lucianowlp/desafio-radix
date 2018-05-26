@@ -1,6 +1,6 @@
 namespace Radix.Gateway.Domain
 {
-    public class AdquirenteEntity
+    public class Adquirente
     {
         public string Id  { get; set; }
         public string Nome { get; set; }

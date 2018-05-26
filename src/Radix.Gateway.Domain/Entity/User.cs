@@ -1,6 +1,6 @@
 namespace Radix.Gateway.Domain
 {
-    public class UserEntity
+    public class User
     {
         public string Id  { get; set; }
         public string Nome { get; set; }
@@ -9,6 +9,6 @@ namespace Radix.Gateway.Domain
         public string Email { get; set; }
         public string Senha { get; set; }
         public bool UtilizaSistemaAntifraudes { get; set; }
-        public AdquirenteEntity Adquirente { get; set; }
+        public Adquirente Adquirente { get; set; }
     }
 }
