@@ -9,7 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace radix.gateway
+namespace Radix.Gateway.WebApi
 {
     public class Startup
     {
