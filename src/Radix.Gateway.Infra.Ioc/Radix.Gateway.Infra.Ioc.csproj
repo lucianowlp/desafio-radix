@@ -8,4 +8,9 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Radix.Gateway.Domain\Radix.Gateway.Domain.csproj" />
+    <ProjectReference Include="..\Radix.Gateway.Infra.Data\Radix.Gateway.Infra.Data.csproj" />
+  </ItemGroup>
+
 </Project>
