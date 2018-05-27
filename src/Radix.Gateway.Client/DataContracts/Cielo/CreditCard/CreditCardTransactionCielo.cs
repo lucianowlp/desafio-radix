@@ -1,14 +1,14 @@
 ﻿using System.Runtime.Serialization;
 
-namespace Radix.Gateway.Client.DataContracts.CreditCard
+namespace Radix.Gateway.Client.DataContracts.Cielo.CreditCard
 {
     [DataContract(Namespace = "")]
-    public partial class CreditCardTransaction : BaseResponse
+    public class CreditCardTransactionCielo : BaseResponse
     {
         [DataMember(EmitDefaultValue = false)]
         public string MerchantOrderId { get; set; }
 
         [DataMember]
-        public Payment Payment { get; set; }
+        public PaymentCielo Payment { get; set; }
     }
 }

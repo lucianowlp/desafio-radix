@@ -13,5 +13,10 @@ namespace Radix.Gateway.Infra.Data.Repository
         {
             return mongoCollection.Find(Builders<User>.Filter.Eq("Email", email)).FirstOrDefault();
         }
+
+        public User FindByMerchantKey(string merchantKey)
+        {
+            return mongoCollection.Find(Builders<User>.Filter.Eq("MerchantKey", merchantKey)).FirstOrDefault();
+        }
     }
 }

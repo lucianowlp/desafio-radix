@@ -23,6 +23,10 @@ namespace Radix.Gateway.WebApi.LogManagement
                 message = "Ops, ocorreu um erro interno no servidor.";
                 status = HttpStatusCode.NotImplemented;
             }
+            else if (exceptionType == typeof(FormatException))
+            {
+                status = HttpStatusCode.BadRequest;
+            }
             else
             {
                 message = context.Exception.Message;

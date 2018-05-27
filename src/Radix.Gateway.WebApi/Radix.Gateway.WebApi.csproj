@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Radix.Gateway.Client\Radix.Gateway.Client.csproj" />
     <ProjectReference Include="..\Radix.Gateway.Infra.Ioc\Radix.Gateway.Infra.Ioc.csproj" />
   </ItemGroup>
 
