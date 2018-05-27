@@ -67,7 +67,7 @@ namespace Radix.Gateway.WebApi.Controllers
                 userValidation.Validate(user);
                 Messages.AddRange(userValidation.Messages);
 
-                if (!userValidation.Messages.HasErrors())
+                if (!Messages.HasErrors())
                 {
                     userRepository.Insert(user);
                     return Ok(new

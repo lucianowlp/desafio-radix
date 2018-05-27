@@ -6,6 +6,16 @@ namespace Radix.Gateway.WebApi.Service
 {
     public class AcquirerConfiguration
     {
+        #region Constants
+        private const string PURCHASERS = "Purchasers";
+        private const string MERCHANT_ID = "MerchantId";
+        private const string CIELO = "Cielo";
+        private const string MERCHANT_KEY = "MerchantKey";
+        private const string CONTENT_TYPE = "Content-Type";
+        private const string END_POINTS = "EndPoints";
+        private const string SANDBOX = "Sandbox";
+        #endregion constants
+
         private readonly IConfiguration configuration;
 
         public AcquirerConfiguration(IConfiguration configuration)
@@ -15,18 +25,27 @@ namespace Radix.Gateway.WebApi.Service
 
         public (string urlApi, Dictionary<string, string> headers) FindAcquirerConfig(User user)
         {
-            var cielo = configuration.GetSection("Purchasers").GetSection("Cielo");
-            var merchantid = cielo.GetValue<string>("MerchantId");
-            var merchantkey = cielo.GetValue<string>("MerchantKey");
-            var contentType = cielo.GetValue<string>("Content-Type");
+            var cielo = configuration.GetSection(PURCHASERS).GetSection(CIELO);
+            var merchantid = cielo.GetValue<string>(MERCHANT_ID);
+            var merchantkey = cielo.GetValue<string>(MERCHANT_KEY);
+            var contentType = cielo.GetValue<string>(CONTENT_TYPE);
+            var urlApi = cielo.GetSection(END_POINTS).GetValue<string>(SANDBOX);
 
-            var urlApi = cielo.GetSection("EndPoints").GetValue<string>("Sandbox");
             var headers = new Dictionary<string, string>();
-            headers.Add("merchantid", merchantid);
-            headers.Add("merchantkey", merchantkey);
-            headers.Add("Content-Type", contentType);
+
+            AddHeaders(headers, "merchantid", merchantid);
+            AddHeaders(headers, "merchantkey", merchantkey);
+            AddHeaders(headers, "Content-Type", contentType);
 
             return (urlApi, headers);
+        }
+
+        private void AddHeaders(Dictionary<string, string> headers, string key, string value)
+        {
+            if (value != null)
+            {
+                headers.Add(key, value);
+            }
         }
     }
 }

@@ -13,7 +13,7 @@ namespace Radix.Gateway.Infra.Data.Repository
         public BaseRepository(IConfiguration configuration)
         {
             var client = new MongoClient(MongoUrl.Create(configuration.GetConnectionString("DefaultConnection")));
-            mongoCollection = client.GetDatabase("gatewayRadix").GetCollection<T>(typeof(T).Name);
+            mongoCollection = client.GetDatabase("gatewayradix").GetCollection<T>(typeof(T).Name);
         }
 
         public long Delete(string id)

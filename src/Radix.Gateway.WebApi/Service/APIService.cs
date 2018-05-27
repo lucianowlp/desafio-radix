@@ -28,7 +28,6 @@ namespace Radix.Gateway.WebApi.Service
                     return response;
                 }
             }
-
             catch (Exception ex)
             {
                 throw ex;

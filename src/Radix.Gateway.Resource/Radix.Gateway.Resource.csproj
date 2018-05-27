@@ -10,6 +10,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>NotificationMessageResource.resx</DependentUpon>
     </Compile>
+    <Compile Update="SalesResource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SalesResource.resx</DependentUpon>
+    </Compile>
     <Compile Update="UserResource.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -21,6 +26,10 @@
     <EmbeddedResource Update="NotificationMessageResource.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>NotificationMessageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="SalesResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SalesResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="UserResource.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
