@@ -1,4 +1,5 @@
-﻿using System.Runtime.Serialization;
+﻿using Radix.Gateway.Client.DataContracts.AntiFraud;
+using System.Runtime.Serialization;
 
 namespace Radix.Gateway.Client.DataContracts.CreditCard
 {
@@ -10,5 +11,8 @@ namespace Radix.Gateway.Client.DataContracts.CreditCard
 
         [DataMember]
         public Payment Payment { get; set; }
+
+        [DataMember]
+        public AntiFraudClearSale AntiFraud { get; set; }
     }
 }
