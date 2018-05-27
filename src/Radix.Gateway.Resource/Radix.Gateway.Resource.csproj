@@ -10,12 +10,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>NotificationMessageResource.resx</DependentUpon>
     </Compile>
+    <Compile Update="UserResource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>UserResource.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Update="NotificationMessageResource.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>NotificationMessageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="UserResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>UserResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

@@ -34,6 +34,8 @@ namespace Radix.Gateway.WebApi
                 config.Filters.Add(typeof(UnhandledExceptionManager));
             });
 
+            services.AddAutoMapperSetup();
+
             InjectorBootstrapper.RegisterServices(services);
         }
 

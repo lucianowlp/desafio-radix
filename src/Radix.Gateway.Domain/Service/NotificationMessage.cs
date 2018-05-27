@@ -1,27 +1,15 @@
 ﻿using Radix.Gateway.Domain.EnumTypes;
 using Radix.Gateway.Resource;
-using System.Runtime.Serialization;
 
-namespace Radix.Gateway.Client.DataContracts
+namespace Radix.Gateway.Domain.Service
 {
-    [DataContract(Name = "NotificationMessage", Namespace = "")]
     public class NotificationMessage
     {
-        [DataMember]
         public string Message { get; set; }
-
-        [DataMember]
         public string Detail { get; set; }
-
-        [IgnoreDataMember]
         public NotificationType Type { get; set; }
-
-        [DataMember]
         public string TypeMessage { get; set; }
-
-        [DataMember]
         public int ErrorLevel { get; set; }
-
         public NotificationMessage() { }
 
         public NotificationMessage(string message, NotificationType type)

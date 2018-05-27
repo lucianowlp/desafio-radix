@@ -1,4 +1,4 @@
-﻿namespace Radix.Gateway.Client.EnumTypes
+﻿namespace Radix.Gateway.Domain.EnumTypes
 {
     public enum NotificationType
     {
