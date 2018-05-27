@@ -45,7 +45,6 @@ namespace Radix.Gateway.WebApi
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseWelcomePage();
             app.UseCors("AllowAnyOrigin");
             app.UseMvc();
         }

@@ -17,6 +17,6 @@ namespace Radix.Gateway.Client.DataContracts
         /// Chave da loja, utilizada para identificar a loja dentro da API
         /// </summary>
         [DataMember]
-        public Guid StoreKey { get; set; }
+        public Guid MerchantKey { get; set; }
     }
 }
