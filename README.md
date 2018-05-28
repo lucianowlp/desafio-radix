@@ -33,6 +33,9 @@ $> dotnet restore
 $> dotnet build
 ```
 ```
+$> cd desafio-radix/src/Radix.Gateway.WebApi
+```
+```
 $> dotnet run
 ```
 
