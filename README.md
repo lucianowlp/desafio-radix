@@ -33,9 +33,8 @@ Você também pode executar no Visual Studio Code, em Windows, Linux ou MacOS.
 - Repository and Generic Repository
 
 ## Serviços
-=====================
 
-** Historico de transações
+- Historico de transações
 
 merchantkey = 7FA24257-587D-4709-9179-6E81B004E9C4
 
@@ -43,11 +42,11 @@ merchantkey = 7FA24257-587D-4709-9179-6E81B004E9C4
 
 =====================
 
-** Manuteção dos lojistas
+- Manuteção dos lojistas
 
 {host}/api/Lojista
 
-* JSON de exemplo:
+  JSON de exemplo:
 ```
 {
 	"Name": "TESTE - Com antifraud habilitado",
@@ -57,20 +56,17 @@ merchantkey = 7FA24257-587D-4709-9179-6E81B004E9C4
 	"MerchantKey": "7FA24257-587D-4709-9179-6E81B004E9C4"
 }
 ```
-=====================
-
-** Realizar transações com cartão de credito
+- Realizar transações com cartão de credito
 
 {host}/api/sales
 
 
-" Headers: "Content-Type" = "application/json"
+ Headers: "Content-Type" = "application/json"
            "merchantkey" = F2A1F485-CFD4-49F5-8862-0EBC438AE923(Lojista sem antifraud habilitado)
         ou "merchantkey" = 7FA24257-587D-4709-9179-6E81B004E9C4(Lojista com antifraud habilitado)
-"
-***
 
-* JSON de exemplo:           
+
+JSON de exemplo:           
 ```   
 {
    "MerchantOrderId": "2014111703",
