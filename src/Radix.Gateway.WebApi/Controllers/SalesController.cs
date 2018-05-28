@@ -16,6 +16,10 @@ using System.Threading.Tasks;
 
 namespace Radix.Gateway.WebApi.Controllers
 {
+    /// <summary>
+    /// Serviço responsável pelas transações com cartão de crédito
+    /// Todas as transações podem ou não ter o serviço de antifraude habilitado, definido no cadastro do lojista.
+    /// </summary>
     [Produces("application/json")]
     [Route("api/Sales")]
     public class SalesController : Controller
@@ -30,6 +34,11 @@ namespace Radix.Gateway.WebApi.Controllers
 
         public List<NotificationMessage> Messages { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="configuration"></param>
+        /// <param name="userRepository"></param>
         public SalesController(IConfiguration configuration, IUserRepository userRepository,
             ITransactionHistoryRepository transactionHistoryRepository)
         {
@@ -44,6 +53,11 @@ namespace Radix.Gateway.WebApi.Controllers
         }
 
         // POST: api/Sales
+        /// <summary>
+        /// Realiza uma transação com cartão de crédito
+        /// </summary>
+        /// <param name="creditCardTransaction"></param>
+        /// <returns></returns>
         [HttpPost]
         public IActionResult Post([FromBody]CreditCardTransaction creditCardTransaction)
         {

@@ -12,6 +12,9 @@ using System.Linq;
 
 namespace Radix.Gateway.WebApi.Controllers
 {
+    /// <summary>
+    /// Serviço responsável pela manutenção dos usuários(lojistas)
+    /// </summary>
     [Produces("application/json")]
     [Route("api/Lojista")]
     public class LojistaController : Controller
@@ -19,16 +22,20 @@ namespace Radix.Gateway.WebApi.Controllers
         private readonly IUserRepository userRepository;
         public List<NotificationMessage> Messages { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="userRepository"></param>
         public LojistaController(IUserRepository userRepository)
         {
             Guardian.AgainstNull(userRepository);
             this.userRepository = userRepository;
-            Messages = new List<NotificationMessage>();
+            this.Messages = new List<NotificationMessage>();
         }
 
         // GET: api/Lojista
         /// <summary>
-        /// Recuperar usuário pelo email
+        /// Recuperar uma usuário pelo email
         /// </summary>
         /// <param name="email"></param>
         [HttpGet("{email}")]
@@ -54,9 +61,9 @@ namespace Radix.Gateway.WebApi.Controllers
 
         // POST: api/Lojista
         /// <summary>
-        /// Criar um usuário
+        /// Cria um usuário
         /// </summary>
-        /// <param name="User"></param>
+        /// <param name="userViewModel"></param>
         [HttpPost]
         public IActionResult Create([FromBody]UserViewModel userViewModel)
         {
@@ -94,6 +101,7 @@ namespace Radix.Gateway.WebApi.Controllers
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
+        [HttpPut]
         public IActionResult Update([FromBody]UserViewModel user)
         {
             Guardian.AgainstNull(user);
@@ -117,10 +125,11 @@ namespace Radix.Gateway.WebApi.Controllers
         }
 
         /// <summary>
-        /// Deletar um usuário pelo id
+        /// Deleta um usuário pelo id
         /// </summary>
-        /// <param name="user"></param>
+        /// <param name="id"></param>
         /// <returns></returns>
+        [HttpDelete]
         public IActionResult Delete(string id)
         {
             var deleteResult = userRepository.Delete(id);
