@@ -125,5 +125,8 @@ Documentação da API
 =============
 https://radixgateway.azurewebsites.net/swagger/
 
+{host}/swagger/
+
+
 
 
