@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Radix.Gateway.Client.ViewModel;
 using Radix.Gateway.Domain;
+using Radix.Gateway.Domain.Repository;
 using Radix.Gateway.Domain.Service;
 using Radix.Gateway.Domain.Validations;
 using Radix.Gateway.Resource;

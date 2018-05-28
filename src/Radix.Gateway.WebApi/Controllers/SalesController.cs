@@ -3,11 +3,14 @@ using Microsoft.Extensions.Configuration;
 using Radix.Gateway.Client.DataContracts.Cielo.CreditCard;
 using Radix.Gateway.Client.DataContracts.CreditCard;
 using Radix.Gateway.Domain;
+using Radix.Gateway.Domain.Entity;
 using Radix.Gateway.Domain.EnumTypes;
+using Radix.Gateway.Domain.Repository;
 using Radix.Gateway.Domain.Service;
 using Radix.Gateway.Resource;
 using Radix.Gateway.WebApi.Service;
 using Radix.Gateway.WebApi.Utility;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -27,6 +30,8 @@ namespace Radix.Gateway.WebApi.Controllers
 
         private readonly IConfiguration configuration;
         private readonly IUserRepository userRepository;
+        private readonly ITransactionHistoryRepository transactionHistoryRepository;
+
         public List<NotificationMessage> Messages { get; set; }
 
         /// <summary>
@@ -34,12 +39,15 @@ namespace Radix.Gateway.WebApi.Controllers
         /// </summary>
         /// <param name="configuration"></param>
         /// <param name="userRepository"></param>
-        public SalesController(IConfiguration configuration, IUserRepository userRepository)
+        public SalesController(IConfiguration configuration, IUserRepository userRepository,
+            ITransactionHistoryRepository transactionHistoryRepository)
         {
             Guardian.AgainstNull(configuration);
             Guardian.AgainstNull(userRepository);
+            Guardian.AgainstNull(transactionHistoryRepository);
             this.configuration = configuration;
             this.userRepository = userRepository;
+            this.transactionHistoryRepository = transactionHistoryRepository;
 
             Messages = new List<NotificationMessage>();
         }
@@ -84,7 +92,7 @@ namespace Radix.Gateway.WebApi.Controllers
             if (!Messages.HasErrors())
             {
                 response = SendSale(creditCardTransaction, user);
-
+                SaveTransactionHistory(radixMerchantKey, response.Result);
                 return Ok(new
                 {
                     success = true,
@@ -105,6 +113,20 @@ namespace Radix.Gateway.WebApi.Controllers
             var data = (CreditCardTransactionCielo)creditCardTransaction;
             var response = APIService.GetApi(acquirerConfig.urlApi, data, acquirerConfig.headers);
             return response;
+        }
+
+        private void SaveTransactionHistory(string merchantKey, string response, string orderReference = null, string IdTransaction = null)
+        {
+            var transactionHistory = new TransactionHistory
+            {
+                IdTransaction = IdTransaction,
+                MerchantKey = merchantKey,
+                CreateDate = DateTime.Now,
+                OrderReference = orderReference,
+                DataTransactionAcquirer = response,
+            };
+
+            transactionHistoryRepository.Insert(transactionHistory);
         }
     }
 }

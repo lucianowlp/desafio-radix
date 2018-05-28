@@ -135,6 +135,9 @@
   <data name="UserDeletedSuccessfully" xml:space="preserve">
     <value>Usuário deletado com sucesso!</value>
   </data>
+  <data name="UserExist" xml:space="preserve">
+    <value>Usuário já existe.</value>
+  </data>
   <data name="UserNotFound" xml:space="preserve">
     <value>Usuário não encontrado.</value>
   </data>
