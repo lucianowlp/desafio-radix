@@ -125,6 +125,8 @@ Nosso serviço antiftaude está habilitado para permitir somente transações on
 
 Documentação da API
 =============
+https://radixgateway.azurewebsites.net/swagger/
+
 {host}/swagger/
 
 
