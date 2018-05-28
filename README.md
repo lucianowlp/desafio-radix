@@ -17,6 +17,13 @@ Nosso gateway tem um serviço especifico para analise antifraude, podendo ser ha
 
 Você também pode executar no Visual Studio Code, em Windows, Linux ou MacOS.
 
+Use o seguinte comando para clonar e baixar o projeto: git clone https://github.com/lucianowlp/desafio-radix.git
+Após baixar o projeto você poderá abrir-lo com VS 2017 ou o VS Code.
+Para executar o projeto direto pelo seu terminal, navegue até a pasta onde baixou e execute os seguintes commandos:
+
+
+
+
 ## Tecnologias implementadas:
 
 - ASP.NET Core 2.0 (with .NET Core)
@@ -101,7 +108,7 @@ JSON de exemplo:
 ```
 Documentação da API
 =============
-
+https://radixgateway.azurewebsites.net/swagger/
 
 
 
