@@ -16,6 +16,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Radix.Gateway.Client", "src
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Radix.Gateway.Resource", "src\Radix.Gateway.Resource\Radix.Gateway.Resource.csproj", "{ACD104E7-BA94-4657-B215-BC8A51671C9D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Radix.Gateway.WebApi.Tests", "src\Radix.Gateway.WebApi.Tests\Radix.Gateway.WebApi.Tests\Radix.Gateway.WebApi.Tests.csproj", "{145CC2D3-3441-4F77-B6CB-E276622C0C95}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -98,6 +100,18 @@ Global
 		{ACD104E7-BA94-4657-B215-BC8A51671C9D}.Release|x64.Build.0 = Release|Any CPU
 		{ACD104E7-BA94-4657-B215-BC8A51671C9D}.Release|x86.ActiveCfg = Release|Any CPU
 		{ACD104E7-BA94-4657-B215-BC8A51671C9D}.Release|x86.Build.0 = Release|Any CPU
+		{145CC2D3-3441-4F77-B6CB-E276622C0C95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{145CC2D3-3441-4F77-B6CB-E276622C0C95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{145CC2D3-3441-4F77-B6CB-E276622C0C95}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{145CC2D3-3441-4F77-B6CB-E276622C0C95}.Debug|x64.Build.0 = Debug|Any CPU
+		{145CC2D3-3441-4F77-B6CB-E276622C0C95}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{145CC2D3-3441-4F77-B6CB-E276622C0C95}.Debug|x86.Build.0 = Debug|Any CPU
+		{145CC2D3-3441-4F77-B6CB-E276622C0C95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{145CC2D3-3441-4F77-B6CB-E276622C0C95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{145CC2D3-3441-4F77-B6CB-E276622C0C95}.Release|x64.ActiveCfg = Release|Any CPU
+		{145CC2D3-3441-4F77-B6CB-E276622C0C95}.Release|x64.Build.0 = Release|Any CPU
+		{145CC2D3-3441-4F77-B6CB-E276622C0C95}.Release|x86.ActiveCfg = Release|Any CPU
+		{145CC2D3-3441-4F77-B6CB-E276622C0C95}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -109,6 +123,7 @@ Global
 		{41F469F5-8566-41B3-94F1-F478254DF4F8} = {3EEAED72-A350-461D-972D-DEB8695E08FA}
 		{5A30D50D-3435-492A-A1C1-CF720A5DFDBA} = {3EEAED72-A350-461D-972D-DEB8695E08FA}
 		{ACD104E7-BA94-4657-B215-BC8A51671C9D} = {3EEAED72-A350-461D-972D-DEB8695E08FA}
+		{145CC2D3-3441-4F77-B6CB-E276622C0C95} = {3EEAED72-A350-461D-972D-DEB8695E08FA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D5DAF252-DC0C-41A4-8F34-CD663FF757E9}
