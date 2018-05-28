@@ -35,7 +35,7 @@ namespace Radix.Gateway.WebApi.Controllers
 
         // GET: api/Lojista
         /// <summary>
-        /// Recuperar uma usuário pelo email
+        /// Recuperar um usuário pelo email
         /// </summary>
         /// <param name="email"></param>
         [HttpGet("{email}")]
@@ -61,7 +61,7 @@ namespace Radix.Gateway.WebApi.Controllers
 
         // POST: api/Lojista
         /// <summary>
-        /// Cria um usuário
+        /// Criar um usuário
         /// </summary>
         /// <param name="userViewModel"></param>
         [HttpPost]
@@ -125,7 +125,7 @@ namespace Radix.Gateway.WebApi.Controllers
         }
 
         /// <summary>
-        /// Deleta um usuário pelo id
+        /// Deletar um usuário pelo id
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
