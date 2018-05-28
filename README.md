@@ -123,8 +123,6 @@ JSON de exemplo:
 ```
 Documentação da API
 =============
-https://radixgateway.azurewebsites.net/swagger/
-
 {host}/swagger/
 
 
