@@ -62,8 +62,10 @@ merchantkey = 7FA24257-587D-4709-9179-6E81B004E9C4
 
 
  Headers: "Content-Type" = "application/json"
-           "merchantkey" = F2A1F485-CFD4-49F5-8862-0EBC438AE923(Lojista sem antifraud habilitado)
-        ou "merchantkey" = 7FA24257-587D-4709-9179-6E81B004E9C4(Lojista com antifraud habilitado)
+ 
+           "merchantkey" = F2A1F485-CFD4-49F5-8862-0EBC438AE923(Lojista sem antifraude habilitado)
+	   
+        ou "merchantkey" = 7FA24257-587D-4709-9179-6E81B004E9C4(Lojista com antifraude habilitado)
 
 
 JSON de exemplo:           
@@ -97,6 +99,8 @@ JSON de exemplo:
      }
 }
 ```
+Documentação da API
+=============
 
 
 
