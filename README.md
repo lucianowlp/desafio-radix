@@ -121,6 +121,8 @@ JSON de exemplo:
      }
 }
 ```
+Nosso serviço antiftaude está habilitado para permitir somente transações onde o país da transação seja o mesmo do endereço de entrega.
+
 Documentação da API
 =============
 {host}/swagger/
