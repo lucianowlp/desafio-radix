@@ -21,8 +21,15 @@ Use o seguinte comando para clonar e baixar o projeto: git clone https://github.
 Após baixar o projeto você poderá abrir-lo com VS 2017 ou o VS Code.
 Para executar o projeto direto pelo seu terminal, navegue até a pasta onde baixou e execute os seguintes commandos:
 
-
-
+```
+$> dotnet restore
+```
+```
+$> dotnet build
+```
+```
+$> dotnet run
+```
 
 ## Tecnologias implementadas:
 
