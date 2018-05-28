@@ -64,7 +64,7 @@ merchantkey = 7FA24257-587D-4709-9179-6E81B004E9C4
 
 =====================
 
-- Manuteção dos lojistas
+- Manutenção dos lojistas
 
 {host}/api/Lojista
 
