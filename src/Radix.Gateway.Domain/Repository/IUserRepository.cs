@@ -1,4 +1,4 @@
-namespace Radix.Gateway.Domain
+namespace Radix.Gateway.Domain.Repository
 {
     public interface IUserRepository : IBaseRepository<User>
     {

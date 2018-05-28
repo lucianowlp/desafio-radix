@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using MongoDB.Driver;
-using Radix.Gateway.Domain;
+using Radix.Gateway.Domain.Repository;
 using System.Collections.Generic;
 
 namespace Radix.Gateway.Infra.Data.Repository

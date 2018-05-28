@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Radix.Gateway.Domain
+namespace Radix.Gateway.Domain.Repository
 {
     public interface IBaseRepository<T>
         where T : class

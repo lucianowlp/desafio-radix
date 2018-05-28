@@ -115,6 +115,15 @@ namespace Radix.Gateway.Resource {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Usuário já existe..
+        /// </summary>
+        public static string UserExist {
+            get {
+                return ResourceManager.GetString("UserExist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Usuário não encontrado..
         /// </summary>
         public static string UserNotFound {
