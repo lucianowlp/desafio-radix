@@ -1,4 +1,7 @@
-﻿namespace Radix.Gateway.Domain.Validations
+﻿using Radix.Gateway.Domain.Repository;
+using Radix.Gateway.Resource;
+
+namespace Radix.Gateway.Domain.Validations
 {
     public class RegisterNewUserValidation : ValidationService<User>
     {
@@ -13,7 +16,7 @@
         {
             if (userExists(entity))
             {
-                AddNotification("Usuário já existe.", EnumTypes.NotificationType.Error);
+                AddNotification(UserResource.UserExist, EnumTypes.NotificationType.Error);
             }
         }
 
