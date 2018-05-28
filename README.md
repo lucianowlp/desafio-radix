@@ -17,6 +17,20 @@ Nosso gateway tem um serviço especifico para analise antifraude, podendo ser ha
 
 Você também pode executar no Visual Studio Code, em Windows, Linux ou MacOS.
 
+## Tecnologias implementadas:
+
+- ASP.NET Core 2.0 (with .NET Core)
+ - ASP.NET WebApi Core
+- .NET Core Native DI
+- AutoMapper
+- Swagger UI
+- XUnit
+
+## Arquitetura:
+
+- Arquitetura completa com preocupações de separação de responsabilidade, código SOLID e Clean
+- Domain Driven Design
+- Repository and Generic Repository
 
 ## Serviços
 =====================
@@ -33,8 +47,8 @@ merchantkey = 7FA24257-587D-4709-9179-6E81B004E9C4
 
 {host}/api/Lojista
 
-JSON de exemplo:
-
+* JSON de exemplo:
+```
 {
 	"Name": "TESTE - Com antifraud habilitado",
 	"LastName": "TESTE",
@@ -42,18 +56,22 @@ JSON de exemplo:
 	"Email": "TESTE2@gmail.com",
 	"MerchantKey": "7FA24257-587D-4709-9179-6E81B004E9C4"
 }
-
+```
 =====================
 
 ** Realizar transações com cartão de credito
 
 {host}/api/sales
 
-JSON de exemplo:
 
-Headers: "Content-Type" = "application/json"
-         "merchantkey" = F2A1F485-CFD4-49F5-8862-0EBC438AE923(Lojista sem antifraud habilitado)
-      ou "merchantkey" = 7FA24257-587D-4709-9179-6E81B004E9C4(Lojista com antifraud habilitado)
+" Headers: "Content-Type" = "application/json"
+           "merchantkey" = F2A1F485-CFD4-49F5-8862-0EBC438AE923(Lojista sem antifraud habilitado)
+        ou "merchantkey" = 7FA24257-587D-4709-9179-6E81B004E9C4(Lojista com antifraud habilitado)
+"
+***
+
+* JSON de exemplo:           
+```   
 {
    "MerchantOrderId": "2014111703",
    "Payment":{
@@ -82,7 +100,7 @@ Headers: "Content-Type" = "application/json"
      	]
      }
 }
-
+```
 
 
 
